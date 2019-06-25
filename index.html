@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
+    <title>NYSL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/nysl.css">
+
+</head>
+
+<body>
+<div id="vue-app">
+
+<navbar v-on:moment="changePage"></navbar>
+<home v-if="actual[actual.lenght-1]=='home'" v-bind:upcomings="gamesupcoming"></home>
+<shedule v-on:moment="changePage" v-on:matchday="matchPages"  v-if="actual=='shedule'" v-bind:matchdays="matchdays"></shedule>
+<tables v-on:moment="changePage" v-bind:teams="clasification" v-bind:maxgoals="moregoals" v-on:team="playersTeam" v-on:name="playersName" v-bind:maxassists="moreassists" v-if="actual=='tables'"></tables>
+<teams v-on:moment="changePage" v-on:team="playersTeam" v-bind:logos="allTeams" v-if="actual=='teams'"></teams>
+<chat v-on:login="login"  v-on:send="sendMessage" v-show="actual=='chat'"></chat>
+<shedule_jornadas  v-on:moment="changePage" v-on:info="changePage" v-on:hour="matchHour" v-on:local="teamLocal" v-on:visitor="teamVisitor" v-if="actual =='matchPage'" v-bind:matchdays="daymatch"></shedule_jornadas>
+<shedule_information v-on:moment="changePage" v-if="actual=='matchInfo'" v-bind:matchinfos="infomatch" v-bind:linelocal="lineuplocal" v-bind:linevisitor="lineupvisitor" ></shedule_information>
+<table_teams v-on:moment="changePage" v-on:name="playersName" v-if="actual=='tableTeams'" v-bind:allteams="playersteam"></table_teams>
+<table_players v-on:moment="changePage" v-if="actual=='tablePlayers'" v-bind:allplayers="playersname"></table_players>
+
+</div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDNwZPxDfARe6m28QXRsliru89FZSF5JsE",
+    authDomain: "anotherfuckingchat-d40d7.firebaseapp.com",
+    databaseURL: "https://anotherfuckingchat-d40d7.firebaseio.com",
+    projectId: "anotherfuckingchat-d40d7",
+    storageBucket: "anotherfuckingchat-d40d7.appspot.com",
+    messagingSenderId: "873888673107",
+    appId: "1:873888673107:web:40388bf0f56edafb"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+           
+   
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+     
+    <script src="js/app.js"></script>
+    
+</body>
+
+</html>

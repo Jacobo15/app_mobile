@@ -1,0 +1,165 @@
+/* Index*/
+.titleHome{
+    display: flex;
+    justify-content: flex-start;
+    margin:10%;
+}
+h1{
+    font-size:70px;
+    color:chartreuse;
+}
+.logo{
+    display:flex;
+    justify-content: flex-end;
+    margin-right:10%;
+    margin-bottom: 10%;
+}
+.logo img{
+    height: 200px;
+}
+.upcomingGames{
+    display:flex;
+    flex-direction: column;
+    text-align: center;   
+}
+.upcomingGames a{
+   margin: 2%; 
+}
+.positionNav{
+    overflow: hidden;
+    bottom: 0;
+    position: fixed;
+    width: 100%;  
+    left: 0;
+}
+.positionLinks{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 100%;
+}
+
+/* Shedule */
+.jornadas{
+    display:flex;
+    flex-direction: column;
+}
+.jornadas div{
+    display:flex;
+    justify-content: space-around;
+    margin: 5px;
+}
+.jornadas button{
+    width: 200px;
+    height: 48px;
+}
+.jornadas p{
+    padding-top: 8px;
+}
+
+/* TABLE */
+.table{
+    text-align:center;
+}
+.table h2{
+    font-size: 25px;
+}
+
+/* Teams */
+
+.positionTeams{
+    display:flex;
+    flex-direction: column;
+}
+.teams{
+    display: flex;
+    justify-content:space-around;
+}
+.teams img{
+    height: 200px;
+    margin: 22px;
+}
+/* Chat */
+.marginChat{
+    display: flex;
+    flex-direction: column; 
+}
+.marginChat div{
+    display: flex;
+    flex-direction: column; 
+    width: 60%;
+    margin: 7%;
+}
+.marginChat button{
+    height: 60px;
+}
+/* tamble_teams*/
+.imageTeam{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.imageTeam img{
+    height: 180px;
+}
+/* table_players*/
+.photo{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.photo img {
+    height: 180px;
+}
+.information{
+    margin-left: 8%;
+}
+
+/* shedule_jornada */
+.infoMatches{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.infoMatches img{
+    height: 140px;
+}
+.informationClick{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+.informationClick img{
+    height: 50px;
+}
+/* shedule_information */
+.map{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.adress{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.line{
+    display: flex;
+    justify-content: center;
+}
+.lineup{
+    display:flex;
+    justify-content: space-around;
+}
+.lineupTeam{
+    display:flex;
+    flex-direction: column;
+}
+.collapse{
+    margin-left: 8%;
+    margin-right: 8%;
+    display: flex;
+    justify-content: center;
+}

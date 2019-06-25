@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
+    <title>NYSL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/nysl.css">
+</head>
+
+<body>
+   <div id="vue-app">
+    <div>
+        <img src="https://img.icons8.com/ios/80/000000/left-filled.png">
+    </div>
+    <div class="infoMatches" v-for="match in matches">
+        <div>
+            <img v-bind:src="match.TeamLogoLocal">
+        </div>
+        <div class="informationClick">
+            <p>{{ match.Hour }}</p>
+            <p>VS</p>
+            <img src="https://img.icons8.com/ios/80/000000/info-filled.png">
+        </div>
+        <div>
+            <img v-bind:src="match.TeamLogoVisitor">
+        </div>
+    </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+     
+    <script src="js/app.js"></script>
+
+
+
+
+</body></html>
