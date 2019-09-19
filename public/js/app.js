@@ -143,7 +143,7 @@ Vue.component("chat", {
         </div>
         <div>
             <div class="marginChatSend" >
-                <input id="text" type="text" placeholder="Enter a message">
+                <input id="text" type="text" v-on:keyup.enter="$emit('send')" placeholder="Enter a message">
                 <button v-on:click="$emit('send')" id="send" >send</button>
                 <button v-on:click="$emit('logout')" id="logout" >Logout</button>
             </div>
@@ -380,7 +380,6 @@ var app = new Vue({
             parent.innerHTML = '';
             for (const key in data.val()) {
                 const element = data.val()[key];
-                console.log(element)
                 parent.insertAdjacentHTML(
                     'beforeend',
                     `
@@ -389,6 +388,7 @@ var app = new Vue({
         </div>
       </div>`,
                 );
+               parent.scrollTop = parent.scrollHeight 
             }
         },
         getgameinfo(game){

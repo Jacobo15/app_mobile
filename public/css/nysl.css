@@ -108,10 +108,9 @@ h1{
     color: white;
 }
 .chatWindow{
-    background-image: url(/img/bs.jpg);
+    background-image: url(../img/bs.jpg);
     height: 400px;
     width: 100%;
-    overflow-y: scroll;
 }
 #text{
     border-radius: 20px;
@@ -149,6 +148,9 @@ h1{
 #mensajes{
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    overflow-x:auto;
+    max-height:400px;
 }
 .msg{
     display: inline-flex;
@@ -265,7 +267,7 @@ h1{
 }
 @media screen and (min-height: 750px) {
     .chatWindow{
-        background-image: url(/img/bs.jpg);
+        background-image: url(../img/bs.jpg);
         height: 600px;
         width: 100%;
         overflow-y: scroll;
@@ -273,14 +275,14 @@ h1{
   }
   @media screen and (orientation: landscape) {
     .chatWindow{
-        background-image: url(/img/bs.jpg);
+        background-image: url(../img/bs.jpg);
         height: 170px;
         width: 100%;
         overflow-y: scroll;
     }
     #login{
         width: 15%;
-        padding: 2%;
+        padding: 3%;
         border-radius: 20px;
         cursor: pointer;
         border: none;
@@ -315,7 +317,7 @@ h1{
   }
   @media screen and (orientation: landscape) and (min-height: 750px) {
     .chatWindow{
-        background-image: url(/img/bs.jpg);
+        background-image: url(../img/bs.jpg);
         height: 500px;
         width: 100%;
         overflow-y: scroll;

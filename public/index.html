@@ -14,15 +14,15 @@
 <div id="vue-app">
 
 <navbar v-on:moment="changePage"></navbar>
-<home v-if="actual[actual.lenght-1]=='home'" v-bind:upcomings="gamesupcoming"></home>
-<shedule v-on:moment="changePage" v-on:matchday="matchPages"  v-if="actual=='shedule'" v-bind:matchdays="matchdays"></shedule>
-<tables v-on:moment="changePage" v-bind:teams="clasification" v-bind:maxgoals="moregoals" v-on:team="playersTeam" v-on:name="playersName" v-bind:maxassists="moreassists" v-if="actual=='tables'"></tables>
-<teams v-on:moment="changePage" v-on:team="playersTeam" v-bind:logos="allTeams" v-if="actual=='teams'"></teams>
-<chat v-on:login="login"  v-on:send="sendMessage" v-show="actual=='chat'"></chat>
-<shedule_jornadas  v-on:moment="changePage" v-on:info="changePage" v-on:hour="matchHour" v-on:local="teamLocal" v-on:visitor="teamVisitor" v-if="actual =='matchPage'" v-bind:matchdays="daymatch"></shedule_jornadas>
-<shedule_information v-on:moment="changePage" v-if="actual=='matchInfo'" v-bind:matchinfos="infomatch" v-bind:linelocal="lineuplocal" v-bind:linevisitor="lineupvisitor" ></shedule_information>
-<table_teams v-on:moment="changePage" v-on:name="playersName" v-if="actual=='tableTeams'" v-bind:allteams="playersteam"></table_teams>
-<table_players v-on:moment="changePage" v-if="actual=='tablePlayers'" v-bind:allplayers="playersname"></table_players>
+<home v-on:info="changePage" v-if="actual[actual.length-1]=='home'"  v-bind:upcomings="gamesupcoming" v-on:gameinfo="getgameinfo"></home>
+<shedule v-on:moment="changePage" v-on:matchday="matchPages"  v-if="actual[actual.length-1]=='shedule'" v-bind:matchdays="matchdays"></shedule>
+<tables v-on:moment="changePage" v-bind:teams="clasification" v-bind:maxgoals="moregoals" v-on:team="playersTeam" v-on:name="playersName" v-bind:maxassists="moreassists" v-if="actual[actual.length-1]=='tables'"></tables>
+<teams v-on:moment="changePage" v-on:team="playersTeam" v-bind:logos="allTeams" v-if="actual[actual.length-1]=='teams'"></teams>
+<chat v-on:login="login" v-on:logout="logout"  v-on:send="sendMessage" v-show="actual[actual.length-1]=='chat'"></chat>
+<shedule_jornadas v-on:team="playersTeam" v-on:return="back" v-on:moment="changePage" v-on:info="changePage" v-if="actual[actual.length-1] =='matchPage'" v-bind:matchdays="daymatch"  v-on:gameinfo="getgameinfo"></shedule_jornadas>
+<shedule_information v-on:moment="changePage" v-on:team="playersTeam" v-on:name="playersName" v-on:return="back" v-if="actual[actual.length-1]=='matchInfo'" v-bind:matchinfos="infomatch" v-bind:linelocal="lineuplocal" v-bind:linevisitor="lineupvisitor" ></shedule_information>
+<table_teams v-on:moment="changePage" v-on:return="back" v-on:name="playersName" v-if="actual[actual.length-1]=='tableTeams'" v-bind:allteams="playersteam"></table_teams>
+<table_players v-on:moment="changePage" v-on:return="back" v-if="actual[actual.length-1]=='tablePlayers'" v-bind:allplayers="playersname"></table_players>
 
 </div>
 
